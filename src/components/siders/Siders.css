@@ -1,0 +1,55 @@
+/* -------------------siderButton---------------------- */
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.icon {
+    margin-left: 110px;
+    margin-right: 30px; 
+}
+.button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+.subbtn {
+    height: 50px;
+    margin-left: 80px;
+    width: 200px;
+    font-size: 17px;
+    border-radius: 20px;
+    background-color: #1D9BF0;
+}
+
+/* -------------userImg---------------- */
+.user {
+    display: flex;
+    width: 230px;
+    height: 60px;
+    color: black;
+    margin-left: 130px;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+.imgU {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.textU {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+.textU .pU {
+    margin: 0px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+}

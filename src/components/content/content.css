@@ -1,0 +1,91 @@
+/* --------------------commentArea.js------------------- */
+.boxCA {
+    display: flex;
+    width: 70%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.leftCA {
+    width: 10%;
+    height: 100%;
+    border-right: 1px solid black;
+}
+.leftCA .img {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+.rightCA {
+    width: 90%;
+    height: 100%;
+
+}
+.rightCA .one {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid black;
+    text-align: left;
+    text-indent: 1em;
+}
+.rightCA .two {
+    height: auto;
+    border-bottom: 1px solid black;
+    text-align: left;
+    text-indent: 1em;
+}
+.rightCA .three {
+    height: auto;
+    border-bottom: 1px solid black;
+}
+.three .img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.rightCA .four {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+/* --------------------Modal------------------- */
+
+.boxM {
+    max-height: 500px;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+}
+.leftM {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10%;
+    height: auto;
+}
+.leftM .img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.leftM .upImg {
+    /* padding: 0px 10px;
+    width: 40px;
+    height: 40px; */
+    text-indent: 10px;
+    font-size: 20px;
+}
+.rightM {
+    width: 90%;
+    height: auto;
+}
+.rightM .one {
+    font-size: 15px;
+}
+.rightM .img {
+    width: 100%;
+    height: 100%;
+}
