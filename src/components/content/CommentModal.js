@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Modal, Upload, Input } from 'antd'
 import { PlusOutlined } from '@ant-design/icons';
-import avator from '../../images/avator.jpg'
+import avator from '../../images/avator.jpg';
+import { useQuery, useMutation} from 'react-query'
 
 const { TextArea} = Input;
 
@@ -27,7 +28,10 @@ export const CommentModal = ({isModalOpen, setIsModalOpen, num}) => {
     setPreviewOpen(true);
     setPreviewTitle(file.name || file.url.substring(file.url.lastIndexOf('/') + 1));
   };
-  const handleChange = ({ fileList: newFileList }) => setFileList(newFileList);
+  const handleChange = ({ fileList: newFileList }) => {
+    console.log(newFileList);
+    setFileList(newFileList)
+  };
   const uploadButton = (
     <button
       style={{

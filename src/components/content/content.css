@@ -2,19 +2,20 @@
 .boxCA {
     display: flex;
     width: 70%;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 1px solid ;
+    border-right: 1px solid #efefef;
+    padding-top: 10px;
 }
 
 .leftCA {
     width: 10%;
     height: 100%;
-    border-right: 1px solid black;
 }
 .leftCA .img {
     width: 50px;
     height: 50px;
-    background-color: black;
+    border-radius: 50%;
+    border: 1px solid #efefef;
 }
 .rightCA {
     width: 90%;
@@ -24,23 +25,23 @@
 .rightCA .one {
     height: 40px;
     line-height: 40px;
-    border-bottom: 1px solid black;
     text-align: left;
     text-indent: 1em;
 }
 .rightCA .two {
     height: auto;
-    border-bottom: 1px solid black;
     text-align: left;
     text-indent: 1em;
+    margin-bottom: 10px;
 }
 .rightCA .three {
     height: auto;
-    border-bottom: 1px solid black;
+    text-align: left;
 }
 .three .img {
     max-width: 100%;
     max-height: 300px;
+    border-radius: 20px;
 }
 
 .rightCA .four {

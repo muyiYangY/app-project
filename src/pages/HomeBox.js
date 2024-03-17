@@ -11,10 +11,11 @@ const headerStyle = {
   height: 64,
   paddingInline: 48,
   lineHeight: '64px',
-  backgroundColor: '#4096ff',
 };
 const contentStyle = {
-  minHeight: 590,
+  maxHeight: 590,
+  overflow: 'auto',
+  backgroundColor: '#FFFFFF'
 };
 const siderStyle = {
   textAlign: 'center',
@@ -25,7 +26,6 @@ const siderStyle = {
 const footerStyle = {
   textAlign: 'center',
   color: '#fff',
-  backgroundColor: '#4096ff',
 };
 const layoutStyle = {
   borderRadius: 8,

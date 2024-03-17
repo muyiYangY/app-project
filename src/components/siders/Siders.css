@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 .icon {
     margin-left: 110px;
@@ -17,6 +16,7 @@
     height: 50px;
     line-height: 50px;
     font-size: 20px;
+    border: none
 }
 .subbtn {
     height: 50px;
