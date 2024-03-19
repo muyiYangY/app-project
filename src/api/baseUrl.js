@@ -2,7 +2,7 @@ import axios from 'axios'
 // 基础路径
 
 const instance = axios.create({
-    baseURL: '',
+    baseURL: 'http://localhost:3000',
     timeout: 1000,
 })
 

@@ -5,26 +5,15 @@ import avator from '../../images/avator.jpg'
 import {CommentOutlined, ShareAltOutlined, HeartOutlined, PictureOutlined} from '@ant-design/icons'
 import { CommentModal } from './CommentModal'
 import { useQuery, useMutation} from 'react-query'
+import { toComments } from '../../api/commentUrl'
 
 export const CommentArea = () => {
-  const commentList = [
-    { 
-      id: 1,
-      userTitle: '2822012087@qq.com',
-      text: '余家贫，耕植不足以自给。幼稚盈室，瓶无储粟，生死所资，未见其术',
-      commentNum: 12,
-      shareNum: 12,
-      heartNum: 15,
-    },
-    {
-      id: 2,
-      userTitle: '2822012087@qq.com',
-      text: ' خير مثلا من هذا القصص، من ناحية تجربة وتجربة',
-      commentNum: 12,
-      shareNum: 12,
-      heartNum: 15,
-    },
-  ]
+  // 载入网页
+  const { isLoading, error, data} = useQuery('comment',
+    () => toComments())
+  console.log(data);
+
+  let commentList = data
   let num = 0;
   const [isModalOpen, setIsModalOpen] = useState(false)
   const commentBtn = () => {
@@ -38,27 +27,42 @@ export const CommentArea = () => {
   const heartBtn = () => {
     console.log('heart submit');
   }
+
+  const detailContent = () => {
+    console.log(" click detailContent");
+  }
+  if(isLoading) {
+    return<div>loading...</div>
+  }
+  if (error) return 'An error has occurred: ' + error.message
   return (
     <>
       {
         commentList.map((comments, index) => {
           return(
             <div className='boxCA' key={index}>
+              {/* 头像部分 */}
               <div className='leftCA'>
                 <img className='img'></img>
               </div>
+              {/* content内容部分 */}
               <div className='rightCA'>
-                <div className='one'>{comments.userTitle}</div>
-                <div className='two'>{comments.text}</div>
-                <div className='three'>
+                {/* 用户名部分 */}
+                <div className='one' >{comments.userTitle}</div>
+                {/* 用户评论部分 */}
+                <div className='two' onClick={detailContent}>{comments.text}</div>
+                {/* 用户上传图片部分 */}
+                <div className='three' onClick={detailContent}>
                   <img src={avator} className='img' ></img>
                 </div>
+                {/* 评论、分享、收藏部分 */}
                 <div className='four'>
                   <span onClick={commentBtn}><CommentOutlined />{comments.commentNum}</span>
                   <span onClick={shareBtn}><ShareAltOutlined />{comments.shareNum}</span>
                   <span onClick={heartBtn}><HeartOutlined />{comments.heartNum}</span>
                 </div>
               </div>
+              {/* 评论模态框 */}
               <CommentModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} num={num}/>
             </div>
           )})
